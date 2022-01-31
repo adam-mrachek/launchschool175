@@ -1,0 +1,11 @@
+<h1>User: <%= @name %></h1>
+  <p>Email Address: <%= @attributes[:email] %></p>
+  <p>Interests: <%= @interests.join(", ") %></p>
+<h3>Other Users</h3>
+  <% @users.each_pair do |name, attributes| %>
+    <% unless name.to_s == @name.downcase %>
+      <ul>
+        <li><a href="users/<%= name.to_s %>"><%= name.to_s.capitalize %></a></li>
+      </ul>
+    <% end %>
+  <% end %>

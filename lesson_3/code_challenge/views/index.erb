@@ -1,0 +1,6 @@
+<h1>Users</h1>
+<% @users.each_pair do |name, attributes| %>
+  <ul>
+    <li><a href="users/<%= name.to_s %>"><%= name.to_s.capitalize %></a></li>
+  </ul>
+<% end %>
